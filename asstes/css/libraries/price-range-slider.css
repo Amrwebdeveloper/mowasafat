@@ -1,0 +1,96 @@
+[fa-range-silder] {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+[fa-range-silder]>div {
+  position: relative;
+  width: 100%;
+}
+
+[fa-range-silder][rtl] {
+  direction: rtl;
+}
+
+[fa-range-silder] .values-group {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 18px;
+  position: relative;
+  top: 15px;
+  height: 30px;
+}
+
+[fa-range-silder] .value {
+  font-size: 14px;
+  width: 3em;
+  border: 1px solid var(--gray2-color);
+  text-align: center;
+}
+
+[fa-range-silder] .track {
+  position: relative;
+  width: inherit;
+  height: 5px;
+  background: var(--gray1-color);
+  border-radius: 3px;
+}
+
+[fa-range-silder] .thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: ew-resize;
+  transform: translateZ(150px);
+}
+
+[fa-range-silder][rtl] .thumb {
+  left: unset;
+  right: 0;
+}
+
+[fa-range-silder] .thumb::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background: var(--main-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 1000px;
+  z-index: 2;
+}
+
+[fa-range-silder] .thumb.active::after {
+  box-shadow: 0 0 10px rgba(var(--rgb), 0.5);
+}
+
+[fa-range-silder] .selection {
+  position: absolute;
+  width: unset;
+  height: 5px;
+  background: var(--main-color);
+  box-shadow: 0 0 10px rgba(var(--rgb), 0.5);
+}
+
+[fa-range-silder] .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 0.5em;
+}
+
+[fa-range-silder] .text .title {
+  text-align: center;
+}
+
+[fa-range-silder] .text .fromTo {
+  display: flex;
+  gap: 5px;
+}
